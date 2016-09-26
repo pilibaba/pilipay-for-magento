@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+    <default>
+        <reference name="cart_sidebar.extra_actions">
+            <block type="pilipay/shortcut" name="pilipay.partner.cart_sidebar.shortcut" template="pilipay/shortcut.mini.phtml"/>
+        </reference>
+    </default>
+
+    <checkout_cart_index>
+        <reference name="checkout.cart.top_methods">
+            <block type="pilipay/shortcut" name="checkout.cart.methods.pilipay_express.top" before="-" template="pilipay/shortcut.phtml">
+                <action method="setIsQuoteAllowed"><value>1</value></action>
+            </block>
+        </reference>
+
+        <reference name="checkout.cart.methods">
+            <block type="pilipay/shortcut" name="checkout.cart.methods.pilipay_express.bottom" before="-" template="pilipay/shortcut.phtml">
+                <action method="setIsQuoteAllowed"><value>1</value></action>
+            </block>
+        </reference>
+    </checkout_cart_index>
+
+    <!-- <catalog_product_view>
+        <reference name="product.info.addtocart">
+            <block type="page/html_wrapper" name="product.info.addtocart.pilipay.wrapper" translate="label">             
+                <block type="pilipay/shortcut" name="product.info.addtocart.pilipay" template="pilipay/shortcut.phtml">
+                    <action method="setIsInCatalogProduct"><value>1</value></action>
+                </block>
+            </block>
+        </reference>
+    </catalog_product_view> -->
+
+    <checkout_onepage_index>
+        <reference name="checkout.onepage">
+            <block type="pilipay/shortcut" name="pilipay.partner.cart_sidebar.shortcut.ss">
+                <action method="addWareHouseAddress">
+                    <template>pilipay/warehouseAddress.phtml</template>
+                </action>
+            </block>
+        </reference>
+        <reference name="checkout.onepage.shipping">
+            <block type="pilipay/shortcut" name="pilipay.partner.cart_sidebar.shortcut.gg" before="-" template="pilipay/warehouseAddress.phtml"/>
+        </reference>
+    </checkout_onepage_index>
+
+    <!-- <checkout_onepage_progress>
+        <reference name="billing.progress">
+            <block type="pilipay/shortcut" name="pilipay.partner.cart_sidebar.shortcut.sss" before="-" template="pilipay/shortcut.phtml"/>
+        </reference>
+        <reference name="shipping.progress">
+            <block type="pilipay/shortcut" name="pilipay.partner.cart_sidebar.shortcut.ggs" before="-" template="pilipay/shortcut.phtml"/>
+        </reference>
+    </checkout_onepage_progress>  
+
+    <checkout_onepage_progress_billing>
+        <reference name="root">
+            <block type="pilipay/shortcut" name="pilipay.partner.cart_sidebar.shortcut.asas" before="-" template="pilipay/shortcut.phtml"/>
+        </reference>
+    </checkout_onepage_progress_billing> -->
+      
+</layout>

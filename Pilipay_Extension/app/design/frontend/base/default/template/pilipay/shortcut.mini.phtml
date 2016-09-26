@@ -1,0 +1,19 @@
+<?php
+/**
+ * @var $this Pilibaba_Pilipay_Block_Shortcut
+ */
+?>
+<?php  if (Mage::helper('checkout')->canOnepageCheckout() && Mage::helper('pilipay')->getActive()): ?>
+
+<li>
+    <p>
+    <a title='PiliPay Checkout' href="<?php echo Mage::getUrl('pilipay/standard/minipay');?>" class='button checkout-button' style='text-indent:-9999em;background: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'pilipay/pilipay.png';?>)  no-repeat center center;'>Pilipay Checkout</a>
+    </p>
+</li>
+<li>
+    <p>
+    <span><?php echo $this->__('-OR-'); ?></span>
+    </p>
+</li>
+
+<?php endif; ?>

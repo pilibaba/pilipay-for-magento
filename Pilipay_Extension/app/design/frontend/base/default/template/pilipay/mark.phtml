@@ -1,0 +1,12 @@
+<?php
+/**
+ * Note: This mark is a requirement of Pilibaba
+ * @see Mage_Pilibaba_Block_Standard_Form
+ */
+?>
+<!-- Pilibaba Logo -->
+<img src="<?php echo $this->escapeHtml($this->getPaymentAcceptanceMarkSrc())?>" alt="<?php echo Mage::helper('pilipay')->__('Acceptance Mark') ?>" class="v-middle" />&nbsp;
+<a href="<?php echo $this->getPaymentAcceptanceMarkHref()?>" onclick="javascript:window.open('<?php echo $this->getPaymentAcceptanceMarkHref()?>','olcwhatispaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, ,left=0, top=0, width=600, height=350'); return false;">
+    <?php echo Mage::helper('pilipay')->__($this->getPaymentWhatIsText()); ?>
+</a>
+<!-- Pilibaba Logo -->

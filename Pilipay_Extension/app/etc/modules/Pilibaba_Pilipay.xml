@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Pilibaba_Pilipay>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Pilibaba_Pilipay>
+    </modules>
+</config>

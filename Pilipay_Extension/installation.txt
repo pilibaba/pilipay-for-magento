@@ -1,0 +1,13 @@
+Follow the steps to install this extension.
+
+1. make sure compiler is disabled in magento admin at system->tools->compilation
+
+2. copy app and media folder on root of magento 
+
+3. logout  magento admin and relogin
+
+4. clear the cache 
+
+5.  go to payment methods in magento admin .
+
+6. do settings for pilibaba using screenshot attached Configuration.png

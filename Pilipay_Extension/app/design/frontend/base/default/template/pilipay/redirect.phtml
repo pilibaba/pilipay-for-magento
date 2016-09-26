@@ -1,0 +1,9 @@
+<?php
+// Retrieve order
+//$_order = new Mage_Sales_Model_Order();
+//$orderId = Mage::getSingleton('checkout/session')->getLastRealOrderId();
+//$_order->loadByIncrementId($orderId);
+$helper = Mage::helper('pilipay/request');
+echo $helper->generateFormAsHtml();
+?>
+ 

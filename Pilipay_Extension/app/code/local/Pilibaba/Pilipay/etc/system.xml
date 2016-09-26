@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<config>
+  <sections>
+    <payment>
+      <groups>
+        <pilipay translate="label comment" module="pilipay">
+          <label>Pilibaba Payment Gateway</label>
+          <frontend_type>text</frontend_type>
+          <sort_order>2</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>1</show_in_store>
+          <fields>
+            <active translate="label">
+              <label>Enabled</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>1</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </active>
+            <title translate="label">
+              <label>Title</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>2</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </title>
+            <gateway_url>
+              <label>Gateway Url</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>3</sort_order>
+              <comment>Payment gateway url of production enviornment of www.pilibaba.com.</comment>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </gateway_url>
+            <track_url>
+              <label>Update Shipemnt Track Url</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>3</sort_order>
+              <comment>UpdateShipemnt Track url of production enviornment of www.pilibaba.com.</comment>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </track_url>
+            <merhcantno>
+              <label>Merchant Number</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>3</sort_order>
+              <comment>Register in en.pilibaba.com.you can get this number from your account info page.</comment>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </merhcantno>
+            <appSecret>
+              <label>App Secret</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>4</sort_order>
+              <comment>Register in en.pilibaba.com.you can get this from your account info page.</comment>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </appSecret>
+             <currencyType>
+              <label>Currency</label>
+              <frontend_type>select</frontend_type>
+              <source_model>pilipay/system_config_source_currency</source_model>
+              <sort_order>5</sort_order>
+              <comment>Payment currency type</comment>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </currencyType>
+            <logoImg>
+                <label>Pilipay Logo</label>
+                <comment>Allowed file types: jpeg, gif, png.</comment>
+                <frontend_type>image</frontend_type>
+                <backend_model>adminhtml/system_config_backend_image</backend_model>
+                <upload_dir config="system/filesystem/media" scope_info="1">pilipay</upload_dir>
+                <base_url type="media" scope_info="1">pilipay</base_url>
+                <sort_order>6</sort_order>
+                <show_in_default>1</show_in_default>
+                <show_in_website>1</show_in_website>
+                <show_in_store>1</show_in_store>
+            </logoImg>
+            <whatIsText>
+              <label>What is pilipay text</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>5</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </whatIsText>
+            <whatIsUrl>
+              <label>What is pilipay url</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>6</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </whatIsUrl>
+            <checkoutUrl>
+              <label>Checkout page url</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>6</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </checkoutUrl>
+            <warehouseInfo>
+              <label>Warehouse Info</label>
+              <frontend_type>select</frontend_type>
+              <sort_order>7</sort_order>
+              <source_model>pilipay/system_config_source_warehouse</source_model>
+              <!-- <comment>We establish serveral warehouse around the world,and now is open USA、Austria(Italy)、UK warehouse.There will be updated later.If you send parcels,you can visit this url to get the address information : http://www.pilibaba.com/en/addressList</comment> -->
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </warehouseInfo>
+            <shippingMethid>
+              <label>Shipping Method</label>
+              <frontend_type>select</frontend_type>
+              <sort_order>8</sort_order>
+              <source_model>pilipay/system_config_source_shippingmethod</source_model>
+              <comment>The shipping method that you deliver the goods to the Pilibaba Warehouse</comment>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </shippingMethid>
+          <!--
+            <checkoutSuccessUrl>
+              <label>Checkout success url</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>7</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </checkoutSuccessUrl>
+          -->
+            <order_status translate="label">
+              <label>New Order Status</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_order_status</source_model>
+              <sort_order>50</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </order_status>
+            <allowspecific translate="label">
+              <label>Payment Applicable From</label>
+              <frontend_type>select</frontend_type>
+              <sort_order>61</sort_order>
+              <source_model>adminhtml/system_config_source_payment_allspecificcountries</source_model>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </allowspecific>
+            <specificcountry translate="label">
+              <label>Countries Payment Applicable From</label>
+              <frontend_type>multiselect</frontend_type>
+              <sort_order>70</sort_order>
+              <source_model>adminhtml/system_config_source_country</source_model>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+              <depends>
+                <allowspecific>1</allowspecific>
+              </depends>
+            </specificcountry>
+            <sort_order translate="label">
+              <label>Sort Order</label>
+              <frontend_type>text</frontend_type>
+			  <sort_order>100</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </sort_order>
+          </fields>
+        </pilipay>
+      </groups>
+    </payment>
+  </sections>
+</config>
